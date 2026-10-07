@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "sic_inverter")(type "KiCad")(uri "${KIPRJMOD}/sic_inverter.kicad_sym")(options "")(descr "Project symbols"))
+)

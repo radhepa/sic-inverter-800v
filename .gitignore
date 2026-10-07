@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+hardware/**/*.kicad_prl
+hardware/**/erc.rpt
+hardware/**/*-backups/
+hardware/**/fp-info-cache

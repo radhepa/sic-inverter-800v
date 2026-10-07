@@ -1,0 +1,56 @@
+{
+  "UDDS (city)": {
+    "distance_km": 11.990238656,
+    "SiC 20 kHz": {
+      "inverter_loss_Wh": 58.50024829403881,
+      "throughput_Wh": 2823.987036273677,
+      "cycle_efficiency_pct": 97.97049414208216,
+      "battery_Wh_per_km": 91.0954800934881,
+      "tj_max_C": 78.3657376060315
+    },
+    "SiC 10 kHz": {
+      "inverter_loss_Wh": 34.66719273735282,
+      "throughput_Wh": 2823.987036273677,
+      "cycle_efficiency_pct": 98.78728975384524,
+      "battery_Wh_per_km": 89.10777524119482,
+      "tj_max_C": 74.30519115115251
+    },
+    "IGBT 10 kHz": {
+      "inverter_loss_Wh": 82.53382154334923,
+      "throughput_Wh": 2823.987036273677,
+      "cycle_efficiency_pct": 97.16039121751437,
+      "battery_Wh_per_km": 93.09990835708102,
+      "tj_max_C": 83.20011320673652
+    },
+    "loss_reduction_pct": 29.119666095537898,
+    "loss_reduction_same_fsw_pct": 57.99638004264158,
+    "range_gain_pct": 2.2003597341337278
+  },
+  "HWFET (highway)": {
+    "distance_km": 16.506549663999998,
+    "SiC 20 kHz": {
+      "inverter_loss_Wh": 27.712312712889883,
+      "throughput_Wh": 2404.1809976646605,
+      "cycle_efficiency_pct": 98.86046346710056,
+      "battery_Wh_per_km": 111.2697736994861,
+      "tj_max_C": 76.60742336616893
+    },
+    "SiC 10 kHz": {
+      "inverter_loss_Wh": 14.760219352925104,
+      "throughput_Wh": 2404.1809976646605,
+      "cycle_efficiency_pct": 99.38980661253424,
+      "battery_Wh_per_km": 110.48510981614211,
+      "tj_max_C": 73.01497231761851
+    },
+    "IGBT 10 kHz": {
+      "inverter_loss_Wh": 26.789881136923622,
+      "throughput_Wh": 2404.1809976646605,
+      "cycle_efficiency_pct": 98.89797605678723,
+      "battery_Wh_per_km": 111.21389093811301,
+      "tj_max_C": 80.85744278714088
+    },
+    "loss_reduction_pct": -3.443208916275875,
+    "loss_reduction_same_fsw_pct": 44.90375198947197,
+    "range_gain_pct": -0.05022276896510247
+  }
+}

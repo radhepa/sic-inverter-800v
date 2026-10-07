@@ -1,0 +1,87 @@
+{
+  "_source": "Wolfspeed C3M0021120K datasheet, Rev. 4 (June 2025). Scalar values copied from the tables; curve points digitized by eye from the listed figures (expect about +/-5% reading error).",
+  "part": "C3M0021120K",
+  "package": "TO-247-4 (separate Kelvin source pin)",
+  "scalars": {
+    "Vds_max_V": 1200,
+    "Vgs_on_V": 15,
+    "Vgs_off_V": -4,
+    "Vgs_abs_max_V": [-8, 19],
+    "Vth_typ_V": 2.5,
+    "Vth_175C_V": 2.0,
+    "Rds_on_25C_ohm": 0.021,
+    "Rds_on_175C_ohm": 0.038,
+    "Rds_on_test": "Vgs = 15 V, Id = 50 A",
+    "Ciss_pF": 4818,
+    "Coss_pF": 180,
+    "Crss_pF": 12,
+    "cap_test": "Vgs = 0 V, Vds = 1000 V, f = 100 kHz",
+    "Eoss_uJ_at_1000V": 99,
+    "Qgs_nC": 49,
+    "Qgd_nC": 50,
+    "Qg_nC": 162,
+    "Rg_int_ohm": 3.3,
+    "Rth_jc_K_per_W": 0.32,
+    "Tj_max_C": 175,
+    "Vsd_25C_V_at_25A": 4.6,
+    "Vsd_175C_V_at_25A": 4.2,
+    "Qrr_nC_175C": 928,
+    "trr_ns_175C": 34,
+    "Irrm_A_175C": 42,
+    "Qrr_test": "Isd = 50 A, Vr = 800 V, di/dt = 2600 A/us, Tj = 175 C",
+    "Eon_mJ_body_diode_175C": 1.58,
+    "Eoff_mJ_body_diode_175C": 0.34,
+    "switching_test": "Vdd = 800 V, Id = 50 A, Vgs = -4/+15 V, Rg(ext) = 2.5 ohm, L = 157 uH, freewheeling = body diode of a second C3M0021120K",
+    "td_on_ns": 29,
+    "tr_ns": 33,
+    "td_off_ns": 57,
+    "tf_ns": 14
+  },
+  "transfer_fig7_Vds20V": {
+    "_note": "Id (A) vs Vgs (V) at Vds = 20 V",
+    "25C": [[5.2, 20], [6.2, 40], [7.0, 62], [8.0, 100], [8.9, 140], [9.9, 200]],
+    "175C": [[4.6, 20], [5.6, 42], [6.3, 60], [7.3, 100], [8.1, 140], [9.2, 200]]
+  },
+  "rds_on_vs_T_fig4": {
+    "_note": "normalized Rds(on) vs Tj (C), Vgs = 15 V, Id = 50 A",
+    "points": [[-50, 1.02], [-25, 0.99], [0, 0.975], [25, 1.0], [50, 1.05], [75, 1.13], [100, 1.24], [125, 1.38], [150, 1.53], [175, 1.71]]
+  },
+  "body_diode_fig9_fig10": {
+    "_note": "body-diode forward voltage Vsd (V) vs current (A), Vgs = -4 V",
+    "25C":  [[25, 4.6], [50, 5.0], [100, 5.8], [150, 6.6], [200, 7.35]],
+    "175C": [[25, 4.2], [50, 4.7], [100, 5.55], [150, 6.35], [200, 7.05]]
+  },
+  "capacitance_fig17_18": {
+    "_note": "pF vs Vds (V), Vgs = 0 V, Tj = 25 C",
+    "Crss": [[0.5, 1100], [2, 700], [5, 450], [8, 330], [12, 85], [15, 68], [25, 45], [50, 31], [100, 23], [150, 19], [200, 17], [400, 13.5], [600, 12.2], [800, 12.2], [1000, 12.5]],
+    "Coss": [[0.5, 3600], [2, 2400], [5, 1800], [8, 1550], [12, 1300], [25, 1000], [50, 780], [100, 520], [150, 400], [200, 320], [400, 230], [600, 198], [800, 185], [1000, 180], [1200, 178]],
+    "Ciss": [[0.5, 5600], [10, 4950], [100, 4850], [1000, 4818]]
+  },
+  "eoss_fig16": {
+    "_note": "Eoss (uJ) vs Vds (V)",
+    "points": [[200, 9], [400, 24], [600, 44], [800, 70], [1000, 100], [1200, 139]]
+  },
+  "gate_charge_fig12": {
+    "_note": "Vgs (V) vs Qg (nC), Id = 20 A, Vds = 800 V, Tj = 25 C",
+    "points": [[0, -4], [49, 6.3], [99, 8.2], [162, 15.0]]
+  },
+  "eon_eoff_vs_id_800V_fig24": {
+    "_note": "mJ vs Id (A); Vdd = 800 V, Rg(ext) = 2.5 ohm, Tj = 25 C, body-diode freewheeling",
+    "Eon": [[10, 0.32], [20, 0.47], [30, 0.62], [40, 0.8], [50, 1.0], [60, 1.22], [70, 1.46], [80, 1.73]],
+    "Eoff": [[10, 0.07], [20, 0.08], [30, 0.12], [40, 0.18], [50, 0.27], [60, 0.37], [70, 0.48], [80, 0.6]]
+  },
+  "eon_eoff_vs_rg_fig25": {
+    "_note": "mJ vs Rg(ext) (ohm); Vdd = 800 V, Id = 50 A, Tj = 25 C",
+    "Eon": [[2.5, 1.1], [5, 1.3], [10, 1.7], [15, 2.1], [20, 2.5]],
+    "Eoff": [[2.5, 0.3], [5, 0.46], [10, 0.77], [15, 1.09], [20, 1.4]]
+  },
+  "eon_eoff_vs_tj_fig26": {
+    "_note": "mJ vs Tj (C); Vdd = 800 V, Id = 50 A, Rg(ext) = 2.5 ohm",
+    "Eon": [[25, 1.02], [75, 1.12], [125, 1.33], [175, 1.6]],
+    "Eoff": [[25, 0.3], [75, 0.31], [125, 0.32], [175, 0.34]]
+  },
+  "zth_jc_fig21_single_pulse": {
+    "_note": "Zth(j-c) (K/W) vs pulse width (s), single pulse",
+    "points": [[1e-06, 0.003], [1e-05, 0.009], [0.0001, 0.03], [0.001, 0.1], [0.01, 0.22], [0.1, 0.315], [1.0, 0.32]]
+  }
+}

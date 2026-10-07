@@ -1,0 +1,77 @@
+{
+  "Qg_per_device_nC": 158.85961069480348,
+  "Qg_per_switch_nC": 794.2980534740174,
+  "gate_power_per_switch_W": 0.3018332603201266,
+  "driver_quiescent_W": 0.076,
+  "isolated_supply_needed_W": 0.3778332603201266,
+  "isolated_supply_chosen_W": 2.0,
+  "supply_margin_x": 5.293340237716132,
+  "peak_source_A": 4.20353982300885,
+  "peak_sink_A": 10.0,
+  "driver_peak_rating_A": 10.0,
+  "P_Rg_on_avg_W": 0.009081708717596728,
+  "P_Rg_off_avg_W": 0.014932803405311524,
+  "Rg_peak_pulse_W": 18.8,
+  "C_bulk_min_uF": 1.5885961069480345,
+  "C_bulk_chosen": "10 uF X7R 50 V + 100 nF per rail at the pins (datasheet asks > 10 uF)",
+  "max_dvdt_V_per_ns": 88.50262844168924,
+  "CMTI_min_V_per_ns": 150.0,
+  "CMTI_margin_x": 1.6948649169084156,
+  "desat_trip_Vds_V": {
+    "min": 6.93,
+    "typ": 7.85,
+    "max": 8.770000000000001
+  },
+  "vds_at_peak_current_150C_V": 2.7312883967033024,
+  "desat_trip_current_per_device_150C_A": {
+    "min": 211.42691265988168,
+    "typ": 238.4313739797974,
+    "max": 265.1376594944626
+  },
+  "desat_false_trip_margin_V": 4.198711603296697,
+  "desat_blanking_cap_pF": 10.0,
+  "desat_delay_us": {
+    "typ": 0.723,
+    "worst": 0.9579069767441861
+  },
+  "short_circuit_results": {
+    "typical": {
+      "i_peak_A": 474.0920156,
+      "i_at_trip_A": 474.0812778,
+      "t_trip_us": 0.723,
+      "t_fault_total_us": 1.3522387599999999,
+      "e_sc_mJ": 292.0579964725902,
+      "v_peak_off_V": 875.4565999
+    },
+    "worst case": {
+      "i_peak_A": 475.7139001,
+      "i_at_trip_A": 475.71327019952747,
+      "t_trip_us": 0.9579069767441861,
+      "t_fault_total_us": 1.9661481119999997,
+      "e_sc_mJ": 440.72951131317876,
+      "v_peak_off_V": 866.0210415
+    }
+  },
+  "Rds_on_150C_at_15V_mOhm": 32.04871475244391,
+  "Rds_on_150C_at_12V_mOhm": 35.11252166469256,
+  "UVLO_on_off_V": [
+    12.0,
+    10.7
+  ],
+  "AIN_V_at": {
+    "25 C": 2.66,
+    "65 C": 1.1718695548287779,
+    "100 C": 0.8574073536923161,
+    "125 C": 0.7707480431206523,
+    "150 C": 0.7265228015447877
+  },
+  "AIN_note": "10 k NTC (B 3435) + 3.3 k series on the cold plate; AIN range 0.6-4.5 V",
+  "isolation": {
+    "type": "reinforced",
+    "viso_Vrms": 5700,
+    "viowm_Vrms": 1500,
+    "viowm_Vdc_equiv": 2121.320343559643,
+    "bus_max_Vdc": 850.0,
+    "package_creepage_mm": 8.0
+  }
+}

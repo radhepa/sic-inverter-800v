@@ -1,0 +1,45 @@
+{
+  "overshoot_corners": {
+    "nominal (850 V, 25 C)": {
+      "v_peak_V": 1084.53873,
+      "dvdt_max_V_per_ns": 88.68822306528047
+    },
+    "+25 % loop inductance": {
+      "v_peak_V": 1085.658928,
+      "dvdt_max_V_per_ns": 88.5645654002758
+    },
+    "+10 % over-current": {
+      "v_peak_V": 1097.147328,
+      "dvdt_max_V_per_ns": 90.06751174739634
+    },
+    "cold device (-40 C)": {
+      "v_peak_V": 1087.462524,
+      "dvdt_max_V_per_ns": 89.16141338298986
+    },
+    "all of the above": {
+      "v_peak_V": 1100.842446,
+      "dvdt_max_V_per_ns": 90.51949547660342
+    }
+  },
+  "overshoot_worst_V": 1100.842446,
+  "overshoot_margin_to_1200V_V": 99.15755399999989,
+  "monte_carlo": {
+    "20 kHz": {
+      "n": 5000,
+      "tj_mean_C": 143.08244309100726,
+      "tj_p99_C": 172.5620646052725,
+      "tj_max_C": 190.34582390159431,
+      "p_over_150C_pct": 24.42,
+      "p_over_175C_pct": 0.62
+    },
+    "10 kHz": {
+      "n": 5000,
+      "tj_mean_C": 127.19148481942614,
+      "tj_p99_C": 152.19812108010834,
+      "tj_max_C": 166.53541221151238,
+      "p_over_150C_pct": 1.58,
+      "p_over_175C_pct": 0.0
+    },
+    "share_max": 1.1022962080553644
+  }
+}

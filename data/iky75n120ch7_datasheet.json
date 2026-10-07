@@ -1,0 +1,38 @@
+{
+  "_source": "Infineon IKY75N120CH7 datasheet, Rev. 1.20 (2023-07-03): 1200 V / 75 A TRENCHSTOP IGBT7 H7 with co-packed EC7 diode, TO-247PLUS-4pin. Table values copied; curve points digitized by eye (expect about +/-5% reading error). Used only as the silicon IGBT baseline for the loss comparison.",
+  "part": "IKY75N120CH7",
+  "package": "TO-247PLUS-4pin (Kelvin emitter)",
+  "scalars": {
+    "Vce_max_V": 1200,
+    "Ic_nom_A": 75,
+    "Vcesat_75A_25C_V": 1.7,
+    "Vcesat_75A_175C_V": 2.0,
+    "Vf_75A_25C_V": 2.5,
+    "Vf_75A_175C_V": 2.3,
+    "Qg_nC": 550,
+    "Rth_jc_igbt_K_per_W": 0.21,
+    "Rth_jc_diode_K_per_W": 0.37,
+    "switching_test": "Vcc = 600 V, Vge = 0/15 V, Rg = 5.3 ohm, Ic = 75 A",
+    "Eon_mJ_25C": 1.81, "Eon_mJ_175C": 3.1,
+    "Eoff_mJ_25C": 2.02, "Eoff_mJ_175C": 4.15,
+    "Erec_mJ_25C": 0.91, "Erec_mJ_175C": 2.93,
+    "Qrr_uC_25C": 2.55, "Qrr_uC_175C": 7.29,
+    "td_off_ns_25C": 367
+  },
+  "vcesat_curves": {
+    "_note": "Vce (V) at Ic (A), Vge = 15 V",
+    "25C":  [[0, 0.6], [5, 0.75], [10, 0.9], [25, 1.15], [50, 1.45], [75, 1.7], [100, 1.85], [150, 2.12], [200, 2.35], [250, 2.55]],
+    "175C": [[0, 0.5], [5, 0.7], [10, 0.95], [25, 1.25], [50, 1.65], [75, 2.0], [100, 2.3], [150, 2.75], [200, 3.15], [250, 3.5]]
+  },
+  "diode_vf_curves": {
+    "_note": "Vf (V) at If (A)",
+    "25C":  [[0, 0.7], [10, 1.2], [25, 1.6], [50, 2.05], [75, 2.5], [100, 2.9], [150, 3.5], [200, 4.1], [300, 5.0]],
+    "175C": [[0, 0.5], [10, 0.95], [25, 1.35], [50, 1.8], [75, 2.3], [100, 2.85], [150, 3.55], [200, 4.2], [300, 5.4]]
+  },
+  "energy_vs_ic_175C_600V": {
+    "_note": "mJ vs Ic (A); Vcc = 600 V, Tvj = 175 C, Rg = 5.3 ohm (datasheet Fig. 'E = f(Ic)')",
+    "Eon":  [[0, 0.0], [10, 0.6], [30, 1.4], [60, 2.5], [90, 3.5], [120, 4.5], [150, 5.6]],
+    "Eoff": [[0, 0.0], [10, 0.7], [30, 1.8], [60, 3.3], [90, 4.8], [120, 6.3], [150, 8.0]],
+    "Erec": [[0, 0.0], [10, 0.8], [30, 1.7], [60, 2.6], [90, 3.3], [120, 3.9], [150, 4.45]]
+  }
+}
