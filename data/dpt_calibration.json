@@ -31,9 +31,9 @@
     "qrr_nC": 928
   },
   "validation": {
-    "n_validation_points": 14,
-    "eon_mean_abs_err_pct": 6.32995967075133,
-    "etot_mean_abs_err_pct": 8.073475024420215,
+    "n_validation_points": 13,
+    "eon_mean_abs_err_pct": 6.7396758788688516,
+    "etot_mean_abs_err_pct": 8.560476922242009,
     "etot_max_abs_err_pct": 24.476481812729787
   }
 }

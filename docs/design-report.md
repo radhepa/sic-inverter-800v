@@ -74,11 +74,11 @@ driver edge time, power-loop inductance, load-inductor capacitance, and the body
 lifetime. The lifetime is anchored to the datasheet's Q<sub>rr</sub> = 928 nC; the model gives
 1043 nC.
 
-**Validation on 14 points not used in calibration** ([figure](../figures/02_dpt_validation.png)):
+**Validation on 13 points not used in calibration** ([figure](../figures/02_dpt_validation.png)):
 
 | Sweep | Mean error (E<sub>on</sub>+E<sub>off</sub>) | Worst |
 |---|---|---|
-| Current, 10–80 A | 3.4 % | 5.7 % |
+| Current, 10–80 A (50 A is the calibration point) | 3.6 % | 5.7 % |
 | Temperature, 75–125 °C | 1.8 % | 2.2 % |
 | Gate resistor, 5–20 Ω | 20.6 % | 24.5 % (at 20 Ω) |
 

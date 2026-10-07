@@ -12,7 +12,7 @@ tell us is the test fixture and the diode's carrier lifetime:
 
 They are fitted to the datasheet's ONE standard operating point
 (800 V, 50 A, Rg = 2.5 ohm) at 25 C (Eon, Eoff, 4 switching times) and 175 C
-(Eon, Qrr), then checked against 14 other datasheet points:
+(Eon, Qrr), then checked against 13 other datasheet points:
 
     validation : Id sweep 10-80 A (Fig. 24), Rg sweep 2.5-20 ohm (Fig. 25),
                  Tj sweep 25-175 C (Fig. 26)
@@ -113,7 +113,8 @@ if "--plots" not in sys.argv:
     print("validating ...")
     f24 = ds["eon_eoff_vs_id_800V_fig24"]
     for (i, eon), (_, eoff) in zip(f24["Eon"], f24["Eoff"]):
-        check("Fig. 24", "Id_A", i, cfg.with_(tj=25.0, i_test=i), eon, eoff)
+        check("Fig. 24", "Id_A", i, cfg.with_(tj=25.0, i_test=i), eon, eoff,
+              used_for_cal=(i == 50))           # 50 A, 2.5 ohm, 25 C IS the calibration point
     f25 = ds["eon_eoff_vs_rg_fig25"]
     for (rg, eon), (_, eoff) in zip(f25["Eon"], f25["Eoff"]):
         check("Fig. 25", "Rg_ohm", rg, cfg.with_(tj=25.0, rg_on=rg, rg_off=rg), eon, eoff,

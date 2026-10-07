@@ -4,7 +4,7 @@ A simulation-driven design of one switch of an 800 V electric-vehicle traction i
 built from datasheets up with free tools (Python, ngspice, KiCad):
 
 1. a **SPICE model of a 1200 V silicon-carbide MOSFET** fitted to the Wolfspeed C3M0021120K datasheet,
-2. a **double-pulse test bench** calibrated against the datasheet's switching energies and validated on 14 points it never saw,
+2. a **double-pulse test bench** calibrated against the datasheet's switching energies and validated on 13 points it never saw,
 3. **design studies** that set the gate resistors, the layout-inductance budget, the negative gate bias and Miller clamp, parallel-device current sharing and short-circuit (DESAT) protection,
 4. an **electro-thermal loss model** that sizes the number of devices and compares SiC with a silicon IGBT over EPA drive cycles,
 5. a **worst-case analysis and 5,000-build Monte Carlo**, and
@@ -18,7 +18,7 @@ built from datasheets up with free tools (Python, ngspice, KiCad):
 |---|---|
 | Device model vs datasheet | R<sub>DS(on)</sub> within 2 % over 25–175 °C; gate charge 162 nC (datasheet 162); C<sub>oss</sub> energy within 1 %; body-diode V<sub>SD</sub> within 0.02 V |
 | Independent check | fitted thresholds 2.53 V / 1.98 V vs datasheet 2.5 V / 2.0 V (never used in the fit) |
-| Switching energy, 14 validation points | E<sub>on</sub>+E<sub>off</sub> mean error 3.4 % vs current, 1.8 % vs temperature; under-predicts the gate-resistor effect above 5 Ω (up to 24 %) |
+| Switching energy, 13 validation points | E<sub>on</sub>+E<sub>off</sub> mean error 3.6 % vs current, 1.8 % vs temperature; under-predicts the gate-resistor effect above 5 Ω (up to 24 %) |
 | Design | 5 × C3M0021120K per switch (30 per inverter), R<sub>g,on</sub> 6.8 Ω, R<sub>g,off</sub> 4.7 Ω, UCC21750-Q1 direct drive, +15 / −4 V, active Miller clamp |
 | Worst-case turn-off overshoot | 1101 V (850 V bus, +25 % loop inductance, +10 % current, −40 °C): below the 1200 V rating |
 | Short circuit | DESAT trips in 0.72 µs (typ) / 0.96 µs (worst); fault cleared in 1.35 / 1.97 µs, under SiC's ~2 µs withstand time |
@@ -56,7 +56,7 @@ Every value comes from a simulation sweep, not a rule of thumb.
 ```mermaid
 flowchart LR
     DS[Datasheet curves<br/>C3M0021120K] --> FIT[01 fit device model<br/>I-V, C-V, Qg, diode]
-    FIT --> CAL[02 calibrate double-pulse test<br/>validate on 14 points]
+    FIT --> CAL[02 calibrate double-pulse test<br/>validate on 13 points]
     CAL --> SW[03 design studies<br/>Rg, layout, crosstalk,<br/>paralleling, short circuit]
     SW --> TAB[switching-energy table]
     TAB --> LOSS[04 losses + thermal<br/>sizing, SiC vs IGBT]
@@ -91,7 +91,7 @@ python hardware/gen_gate_driver.py # regenerates the KiCad schematic from the re
 | Script | Does |
 |---|---|
 | `01_fit_device.py` | fits the SiC MOSFET model to the datasheet's static curves |
-| `02_calibrate_dpt.py` | calibrates the double-pulse bench, validates on 14 datasheet points |
+| `02_calibrate_dpt.py` | calibrates the double-pulse bench, validates on 13 datasheet points |
 | `03_switching_design.py` | gate resistors, layout budget, energy table, crosstalk, paralleling, short circuit |
 | `04_losses_thermal.py` | thermal network, device count, efficiency, SiC vs IGBT |
 | `05_drive_cycle.py` | EPA UDDS and HWFET cycles |
